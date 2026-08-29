@@ -1,0 +1,9 @@
+{
+	"name": "P1A",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/node:2": {},
+		"ghcr.io/shyim/devcontainers-features/bun:0": {}
+	}
+}
