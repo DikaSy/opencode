@@ -38,12 +38,16 @@ export class SandboxURL {
   }
 }
 
+const SANDBOX_CLASSES = [
+  SandboxDate,
+  SandboxRegExp,
+  SandboxMap,
+  SandboxSet,
+  SandboxURL,
+  SandboxURLSearchParams,
+];
+
 export const isSandboxValue = (
   value: unknown,
 ): value is SandboxDate | SandboxRegExp | SandboxMap | SandboxSet | SandboxURL | SandboxURLSearchParams =>
-  value instanceof SandboxDate ||
-  value instanceof SandboxRegExp ||
-  value instanceof SandboxMap ||
-  value instanceof SandboxSet ||
-  value instanceof SandboxURL ||
-  value instanceof SandboxURLSearchParams
+  SANDBOX_CLASSES.some(cls => value instanceof cls)
